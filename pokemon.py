@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import random
-from pygame import mixer   
+#from pygame import mixer   
 
 st.markdown('# Quem é esse POKEMON???') 
 st.markdown('Acerte os nomes para ganhar pokemons e montar o seu time para batalha! Seu objetivo é ganhar 6 pokemons!')
@@ -41,15 +41,15 @@ if col1.button('Checar'):
 	if escolha == dados.loc[certo, 'name']:
 		st.success('Acertou, mizeravi!!')
 		st.session_state['acertos'] += 1
-		mixer.init()
-		mixer.music.load('acertou-mizeravi.mp3')
-		mixer.music.play() 
+		#mixer.init()
+		#mixer.music.load('acertou-mizeravi.mp3')
+		#mixer.music.play() 
 
 	else: 
 		st.error('Errrrrooooooou!')
-		mixer.init()
-		mixer.music.load('faustao-errou.mp3')
-		mixer.music.play()
+		#mixer.init()
+		#mixer.music.load('faustao-errou.mp3')
+		#mixer.music.play()
  
  
 
