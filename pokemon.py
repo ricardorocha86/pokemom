@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd 
 import random
+import chime
+chime.theme('zelda')
 #from pygame import mixer   
 
 st.markdown('# Quem é esse POKEMON???') 
@@ -41,12 +43,14 @@ if col1.button('Checar'):
 	if escolha == dados.loc[certo, 'name']:
 		st.success('Acertou, mizeravi!!')
 		st.session_state['acertos'] += 1
+		chime.success()
 		#mixer.init()
 		#mixer.music.load('acertou-mizeravi.mp3')
 		#mixer.music.play() 
 
 	else: 
 		st.error('Errrrrooooooou!')
+		chime.error()
 		#mixer.init()
 		#mixer.music.load('faustao-errou.mp3')
 		#mixer.music.play()
